@@ -10,16 +10,19 @@ export default () => {
     try {
       const response = await RestCountries.get("/all", {
         params: {
+             limit: 50,
           term: term,
         },
       });
-      console.log(response);
+      setResults(response.data);
     } catch (err) {
-      console.log(err);
+      setError(err);
     }
   };
 
   useEffect(() => {
-    searchCountries();
+    searchCountries("Afghanistan");
   }, []);
+
+  return [searchCountries, results, error]
 };
