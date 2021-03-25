@@ -1,5 +1,6 @@
 import React from "react";
 import CountryShow from "../components/CountryShow"
+import {ListDiv} from "../styles/CountryListStyles"
 
 const CountriesList = ({results}) => {
 
@@ -12,8 +13,10 @@ const renderCountries = () => {
 
 return (
      <>
-<h1>Countries!!!</h1>
-{renderCountries()}
+<ListDiv>
+     {renderCountries()}
+ </ListDiv>
+
 </>
 )
 
