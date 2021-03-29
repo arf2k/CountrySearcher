@@ -4,7 +4,7 @@ import {CardContainer, InfoDiv} from "../styles/CountryShowStyles"
 const CountryShow = ({country}) => {
      return (
           <CardContainer>
-          <h1>{country.name}</h1>
+          <h1 style={{textAlign: "center"}}>{country.name}</h1>
           <img src={country.flag} style={{height: "200px", width: "auto"}}/>
           <InfoDiv>
                <h3>Capital: {country.capital}</h3>

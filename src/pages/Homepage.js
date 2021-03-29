@@ -1,23 +1,15 @@
-import React, {useState} from "react";
+import React from "react";
 import useResults from "../hooks/useResults";
-import CountriesList from "../components/CountriesList"
-import SearchBar from "../components/SearchBar"
+import CountriesList from "../components/CountriesList";
 
 const Homepage = () => {
-     const [term, setTerm] = useState("")
-     
-const [searchCountries, results, error] = useResults()
+  const [searchCountries, results, error] = useResults();
 
-// const countriesFilter = country => {
-//      return results.filter(country => country.name.toLowerCase().includes(term.toLowerCase()))
-// }
+  return (
+    <>
+      <CountriesList results={results} />
+    </>
+  );
+};
 
-     return (
-          <>
-<SearchBar term={term} onTermChange={setTerm} onTermSubmit={() => searchCountries(term)}/>
-<CountriesList results={results}/>
-</>
-     )
-}
-
-export default Homepage
+export default Homepage;

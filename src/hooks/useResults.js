@@ -2,15 +2,14 @@ import { useState, useEffect } from "react";
 import RestCountries from "../api/RestCountries";
 
 export default () => {
-
-     const [results, setResults] = useState([])
-     const [error, setError] = useState("")
+  const [results, setResults] = useState([]);
+  const [error, setError] = useState("");
 
   const searchCountries = async (term) => {
     try {
       const response = await RestCountries.get("/all", {
         params: {
-             limit: 50,
+          limit: 50,
           term: term,
         },
       });
@@ -21,8 +20,8 @@ export default () => {
   };
 
   useEffect(() => {
-    searchCountries("Afghanistan");
+    searchCountries();
   }, []);
 
-  return [searchCountries, results, error]
+  return [searchCountries, results, error];
 };

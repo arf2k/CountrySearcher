@@ -1,11 +1,15 @@
-import React from "react"
+import React from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ searchTerm, searchHandler }) => {
+  return (
+    
+      <input
+        placeholder="Look for a country"
+        value={searchTerm}
+        onChange={searchHandler}
+      />
+  
+  );
+};
 
-     return (
-          <input placeholder="Search"/>
-     )
-
-}
-
-export default SearchBar
+export default SearchBar;
