@@ -7,7 +7,8 @@ border-style: ridge;
 border-width: 5px;
 height: 500px;
 width: 300px;
-padding: 10px
+padding: 10px;
+background-color: red;
 `
 
 export const Flag = styled.img`

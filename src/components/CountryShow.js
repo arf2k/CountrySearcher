@@ -6,7 +6,7 @@ const CountryShow = ({ country }) => {
     <CardContainer>
       <h1 style={{ textAlign: "center" }}>{country.name}</h1>
       <img src={country.flag} style={{ height: "200px", width: "auto" }} />
-      <InfoDiv>
+      <InfoDiv style={{color: "yellow"}}>
         <h3>Capital: {country.capital}</h3>
         <h3>Population: {country.population}</h3>
         <h3>Region: {country.subregion}</h3>
