@@ -8,12 +8,13 @@ border-width: 5px;
 height: 500px;
 width: 300px;
 padding: 10px;
-background-color: red;
+background-color: black;
 `
 
 export const Flag = styled.img`
 height: 200px;
 width: 500px;
+border-color: white;
 `
 
 export const InfoDiv = styled.div`
